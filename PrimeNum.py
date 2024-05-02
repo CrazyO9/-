@@ -2,7 +2,7 @@
 
 def isPrimeNum(num):
     dividNum = 2
-    if num > 1:
+    if num >= 1:
         while dividNum <= num:
             if num % dividNum == 0 and num != dividNum:
                 return False
@@ -11,9 +11,5 @@ def isPrimeNum(num):
     else:
         return False
     
-primeNumArr = []
-for idx in range(100):
-    if isPrimeNum(idx):
-        primeNumArr.append(idx)
-
-print(primeNumArr)
+prime_num = [idx for idx in range(100) if isPrimeNum(idx)]
+print(prime_num)
